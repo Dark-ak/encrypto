@@ -1,0 +1,20 @@
+{
+  "name": "@repo/crypto",
+  "version": "1.0.0",
+  "type": "module",
+  "private": "true",
+  "scripts": {
+    "build": "tsc"
+  },
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@tsconfig/node24": "^24.0.4",
+    "typescript": "^5.9.3"
+  }
+}
