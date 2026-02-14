@@ -31,7 +31,7 @@ await sql`
 
 app.post('/tx/encrypt', async (req, res) => {
   const { partyId, payload } = req.body as any;
-  const data = JSON.parse(payload)
+  const data = typeof payload === 'string' ? JSON.parse(payload) : payload;
   const record = protect(data, partyId, process.env.MASTER_KEY!);
 
   await sql`
