@@ -7,7 +7,7 @@ import { protect, unprotect } from "@repo/crypto"
 const app = fastify()
 
 await app.register(cors, {
-  origin: "http://localhost:3000"
+  origin: process.env.FRONTEND_URL || "http://localhost:3000"
 });
 
 const sql =  neon(process.env.DATABASE_URL!)
